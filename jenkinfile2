@@ -9,7 +9,7 @@ agent{
     stages {
         stage('java') {
           steps {
-                sh "java - version"
+                sh "java -version"
           }
         }
     }
