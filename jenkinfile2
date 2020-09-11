@@ -8,7 +8,7 @@ agent{
 }
     stages {    
         stage('java') {
-                         when { branch ‘production’ }
+                       
                  steps {
 
 
