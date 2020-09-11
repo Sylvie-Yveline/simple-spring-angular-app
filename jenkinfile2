@@ -19,9 +19,16 @@ agent{
         }
  
     }
+    stage(‘Deploy’) {
+        parallel {
+        stage (‘Branch A’) {
+                steps {
+        echo ‘Etape branche A’
+    }
+}
         post {
-            always {
-                echo 'end pipeline'
+                 regression {
+                echo 'regresssion'
             }
             }   
 }
