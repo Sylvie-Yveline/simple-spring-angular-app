@@ -6,13 +6,24 @@ agent{
             args '-p 8087:8080'
         }
 }
-    stages {
+    stages {    
         stage('java') {
-          steps {
+                         when { branch ‘production’ }
+                 steps {
+
+
+
+              
                 sh "java -version"
-          }
+          }              
         }
+ 
     }
+        post {
+            always {
+                echo 'end pipeline'
+            }
+            }   
 }
 
         
